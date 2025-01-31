@@ -42,3 +42,22 @@ reset_btn_lista_spesa.addEventListener('click', function () {
     // svuoto il contenuto della ul
     ul_lista_spesa.innerHTML = '';
 });
+
+// ---------------------------------------------------------------------
+
+// Gioco dei dadi con l'utilizzo dello switch
+
+// Dichiarazione delle variabili dove recupero gli elementi da dom
+
+// recuperiamo i bottoni
+let dice_btn_start = document.getElementById('start-btn-dice');
+let dice_btn_reset = document.getElementById('reset-btn-dice');
+
+// recupero gli elementi per mostrare del contenuto sul dom
+let dice_human_icon = document.getElementById('human-dice');
+let dice_pc_icon = document.getElementById('pc-dice');
+let dice_game_msg = document.getElementById('game-result');
+
+console.log(dice_human_icon, dice_pc_icon, dice_game_msg);
+
+
