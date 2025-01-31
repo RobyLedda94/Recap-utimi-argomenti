@@ -65,6 +65,56 @@ dice_btn_start.addEventListener('click', function () {
     let pc_number = Math.floor(Math.random() * 6 + 1);
     console.log(human_number, pc_number);
 
+    // Reset delle classi assednate mantenedo la classe base
+    dice_human_icon.className = 'fas fa-2xl';
+    dice_pc_icon.className = 'fas fa-2xl';
+
+
+    // tramite lo switch assegnamo le icone all'utene e al pc in base al numero random
+    // Icone utente utilzzo dello switch
+    switch (human_number) {
+        case 1:
+            dice_human_icon.classList.add('fa-dice-one');
+            break;
+        case 2:
+            dice_human_icon.classList.add('fa-dice-two');
+            break;
+        case 3:
+            dice_human_icon.classList.add('fa-dice-three');
+            break;
+        case 4:
+            dice_human_icon.classList.add('fa-dice-four');
+            break;
+        case 5:
+            dice_human_icon.classList.add('fa-dice-five');
+            break;
+        case 6:
+            dice_human_icon.classList.add('fa-dice-six');
+            break;
+    };
+
+    // Icone pc utilzzo dello switch
+    switch (pc_number) {
+        case 1:
+            dice_pc_icon.classList.add('fa-dice-one');
+            break;
+        case 2:
+            dice_pc_icon.classList.add('fa-dice-two');
+            break;
+        case 3:
+            dice_pc_icon.classList.add('fa-dice-three');
+            break;
+        case 4:
+            dice_pc_icon.classList.add('fa-dice-four');
+            break;
+        case 5:
+            dice_pc_icon.classList.add('fa-dice-five');
+            break;
+        case 6:
+            dice_pc_icon.classList.add('fa-dice-six');
+            break;
+    };
+
     // definiamo la logica del gioco (condizione di vittoria sconfitta e pareggio)
     // istruzioni condizionali
     if (human_number > pc_number) {
