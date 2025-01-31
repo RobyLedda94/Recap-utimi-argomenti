@@ -16,5 +16,12 @@ let ul_lista_spesa = document.getElementById('lista-spesa');
 
 // metto il bottone in attesa di un evento click
 btn_lista_spesa.addEventListener('click', function () {
-    console.log(btn_lista_spesa);
+    // dichiaro la variabile contatore
+    let i = 0
+    // ciclo while sull'array della spesa
+    while (i < array_lista_spesa.length) {
+        console.log(array_lista_spesa[i]);
+        // incremento
+        i++;
+    }
 });
