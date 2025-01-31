@@ -135,6 +135,28 @@ dice_btn_start.addEventListener('click', function () {
 });
 
 
+// Logica per il reset
+
+// evento click al bottone reset
+
+dice_btn_reset.addEventListener('click', function () {
+    // resetto il messaggio 
+    dice_game_msg.innerText = '';
+    // resetto le classi del messaggio 
+    dice_game_msg.classList = '';
+
+    // reset delle classi per le icone
+    dice_human_icon.className = 'fas fa-2xl';
+    dice_pc_icon.className = 'fas fa-2xl';
+
+    // mostro un messaggio opzionale per il reset
+
+    dice_game_msg.innerText = 'Gioco resettato, premi "Start", per iniziare';
+    dice_game_msg.classList.add('text-primary');
+
+});
+
+
 
 
 
