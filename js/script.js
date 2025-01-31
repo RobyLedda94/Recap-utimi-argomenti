@@ -172,13 +172,33 @@ let btn_check = document.getElementById('check-film');
 let btn_add = document.getElementById('add-film');
 let btn_reset = document.getElementById('reset-list');
 
-console.log(btn_show, btn_check, btn_add, btn_reset);
+
 
 // elementi di visualizazzione
 let films_todo_list = document.getElementById('film-todo-list');
 let msg_todoList = document.getElementById('msg-film');
 
-console.log(films_todo_list, msg_todoList);
+
+// evento click per al bottone che mostra la lista
+btn_show.addEventListener('click', function () {
+    console.log(btn_show);
+});
+
+// evento click al bottone che controlla gli elementi della lista
+btn_check.addEventListener('click', function () {
+    console.log(btn_check);
+});
+
+// evento click al bottone che aggiunge un nuovo elemento in coda nell'array
+btn_add.addEventListener('click', function () {
+    console.log(btn_add);
+});
+
+
+// evento click al bottone che nasconde la todo list 
+btn_reset.addEventListener('click', function () {
+    console.log(btn_reset);
+});
 
 
 
