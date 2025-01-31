@@ -2,7 +2,8 @@
 
 
 // Dichiarazione dell'array 
-let lista_spesa = ['Pasta', 'Pomodori', 'Melanzane', 'Salumi', 'Frutta', 'Bevande'];
+let array_lista_spesa = ['Pasta', 'Pomodori', 'Melanzane', 'Salumi', 'Frutta', 'Bevande'];
+console.log(array_lista_spesa);
 
 // Recupero gli elementi dal DOM
 
@@ -11,5 +12,9 @@ let lista_spesa = ['Pasta', 'Pomodori', 'Melanzane', 'Salumi', 'Frutta', 'Bevand
 let btn_lista_spesa = document.getElementById('btn-lista-spesa');
 
 // recupero l'elemento che mostra il risultato a video
-
 let ul_lista_spesa = document.getElementById('lista-spesa');
+
+// metto il bottone in attesa di un evento click
+btn_lista_spesa.addEventListener('click', function () {
+    console.log(btn_lista_spesa);
+});
