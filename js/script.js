@@ -29,6 +29,9 @@ btn_lista_spesa.addEventListener('click', function () {
         list_items_spesa.innerText = array_lista_spesa[i];
         // appendo i list items con il contenuto alla ul (unordered list)
         ul_lista_spesa.appendChild(list_items_spesa);
+        // tramite la proprietà classList stilizzo la mia lista
+        ul_lista_spesa.classList.add('list-unstyled');
+        list_items_spesa.classList.add('py-2');
         // incremento
         i++;
     }
