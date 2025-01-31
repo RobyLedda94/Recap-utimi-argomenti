@@ -204,6 +204,15 @@ btn_check.addEventListener('click', function () {
     // variabile flag impostata a false (parto con il presupposto che non ho trovato il film)
     let flag_foundFilm = false;
 
+    // ciclo for sull'array di films
+    for (let i = 0; i < films.length; i++) {
+        // annido nel ciclo un if di controllo che confronta gli elementi dell'array con il valore del campo input
+        if (films[i] === film_input) {
+            // setto la variabile flag a true 
+            flag_foundFilm = true;
+        };
+    };
+
 });
 
 // evento click al bottone che aggiunge un nuovo elemento in coda nell'array
