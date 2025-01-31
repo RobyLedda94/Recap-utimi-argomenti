@@ -215,9 +215,12 @@ btn_check.addEventListener('click', function () {
 
     // istruzione condizionale dove indico in base alla variabile flag se il film e presente o meno
     if (flag_foundFilm) {
-        console.log('film presente');
+        // inietto del contenuto al messaggio tramite il template literal
+        msg_todoList.innerText = `Il film ${film_input} è gia presente nella lista`;
+        msg_todoList.classList.add('text-green', 'my-2');
     } else {
-        console.log('aggiungi il nuovo film');
+        msg_todoList.innerText = `Il film ${film_input} non è presente nella lista aggiungilo`;
+        msg_todoList.classList.add('text-warning', 'my-2');
     }
 
 });
