@@ -64,6 +64,16 @@ dice_btn_start.addEventListener('click', function () {
     let human_number = Math.floor(Math.random() * 6 + 1);
     let pc_number = Math.floor(Math.random() * 6 + 1);
     console.log(human_number, pc_number);
+
+    // definiamo la logica del gioco (condizione di vittoria sconfitta e pareggio)
+    // istruzioni condizionali
+    if (human_number > pc_number) {
+        console.log(`L'utente vince con il numero ${human_number}`);
+    } else if (human_number < pc_number) {
+        console.log(`Il pc vince con il numero ${pc_number}`);
+    } else {
+        console.log('Pareggio');
+    }
 });
 
 
