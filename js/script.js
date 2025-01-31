@@ -204,6 +204,16 @@ btn_check.addEventListener('click', function () {
     // variabile flag impostata a false (parto con il presupposto che non ho trovato il film)
     let flag_foundFilm = false;
 
+    // svuoto le classi del messaggio per evitare conflitti
+    msg_todoList.classList = '';
+
+    // eseguo un controllo sul dato inserito
+    if (film_input === '') {
+        msg_todoList.innerText = 'Per favore inserisci un dato valido';
+        msg_todoList.classList.add('text-danger', 'my-2');
+        return;
+    };
+
     // ciclo for sull'array di films
     for (let i = 0; i < films.length; i++) {
         // annido nel ciclo un if di controllo che confronta gli elementi dell'array con il valore del campo input
