@@ -69,6 +69,9 @@ dice_btn_start.addEventListener('click', function () {
     dice_human_icon.className = 'fas fa-2xl';
     dice_pc_icon.className = 'fas fa-2xl';
 
+    // il messaggio verrà stilizzato in base alla condizione, svuoto prima le classi per evitare conflitti
+    dice_game_msg.classList = '';
+
 
     // tramite lo switch assegnamo le icone all'utene e al pc in base al numero random
     // Icone utente utilzzo dello switch
@@ -118,12 +121,20 @@ dice_btn_start.addEventListener('click', function () {
     // definiamo la logica del gioco (condizione di vittoria sconfitta e pareggio)
     // istruzioni condizionali
     if (human_number > pc_number) {
-        console.log(`L'utente vince con il numero ${human_number}`);
+        // inietto il contenuto al messaggio tramite il template literal per l'utente
+        dice_game_msg.innerText = `L'utente vince con il numero ${human_number}, contro il PC con il numero ${pc_number}`;
+        // assegno una classe definita in css
+        dice_game_msg.classList.add('text-green');
     } else if (human_number < pc_number) {
-        console.log(`Il pc vince con il numero ${pc_number}`);
+        dice_game_msg.innerText = `Ha vinto il pc con il numero ${pc_number}, contro l'utente con in numero ${human_number}`;
+        dice_game_msg.classList.add('text-red');
     } else {
-        console.log('Pareggio');
+        dice_game_msg.innerText
     }
 });
+
+
+
+
 
 

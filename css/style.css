@@ -1,0 +1,13 @@
+/* calssi di stile */
+
+.text-green {
+    color: rgb(0, 141, 0);
+}
+
+.text-red {
+    color: red;
+}
+
+.text-cyan {
+    color: rgb(2, 163, 163);
+}
