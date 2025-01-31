@@ -8,8 +8,9 @@ console.log(array_lista_spesa);
 // Recupero gli elementi dal DOM
 
 
-// recupero il bottone 
+// recupero i bottoni
 let btn_lista_spesa = document.getElementById('btn-lista-spesa');
+let reset_btn_lista_spesa = document.getElementById('reset-btn-lista-spesa');
 
 // recupero l'elemento che mostra il risultato a video
 let ul_lista_spesa = document.getElementById('lista-spesa');
@@ -31,4 +32,10 @@ btn_lista_spesa.addEventListener('click', function () {
         // incremento
         i++;
     }
+});
+
+// metto il bottone reset in attesa di un evento click
+reset_btn_lista_spesa.addEventListener('click', function () {
+    // svuoto il contenuto della ul
+    ul_lista_spesa.innerHTML = '';
 });
