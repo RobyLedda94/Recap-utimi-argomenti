@@ -189,12 +189,19 @@ btn_show.addEventListener('click', function () {
         li_todoList.innerText = films[i];
         // appendo i list items alla lista 'film_todo_list'
         films_todo_list.appendChild(li_todoList);
-    }
+
+        // classList per stilizzare la lista
+        films_todo_list.classList.add('list-unstyled', 'my-2');
+        li_todoList.classList.add('py-2');
+    };
 
 });
 
 // evento click al bottone che controlla gli elementi della lista
 btn_check.addEventListener('click', function () {
+    // al momento del click recupero l'elemento input e catturo il valore inserito dall'utente
+    let film_input = document.getElementById('input-film-list').value.toLowerCase();
+    console.log(film_input);
 
 });
 
