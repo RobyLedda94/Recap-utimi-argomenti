@@ -20,7 +20,9 @@ btn_lista_spesa.addEventListener('click', function () {
     let i = 0
     // ciclo while sull'array della spesa
     while (i < array_lista_spesa.length) {
-        console.log(array_lista_spesa[i]);
+        // creo i list items che conterrano gli elementi dell'array
+        let list_items_spesa = document.createElement('li');
+        console.log(list_items_spesa);
         // incremento
         i++;
     }
