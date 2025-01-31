@@ -129,7 +129,8 @@ dice_btn_start.addEventListener('click', function () {
         dice_game_msg.innerText = `Ha vinto il pc con il numero ${pc_number}, contro l'utente con in numero ${human_number}`;
         dice_game_msg.classList.add('text-red');
     } else {
-        dice_game_msg.innerText
+        dice_game_msg.innerText = `Pareggio!! Numero utente ${human_number}, numero pc ${pc_number}`;
+        dice_game_msg.classList.add('text-cyan');
     }
 });
 
