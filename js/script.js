@@ -58,6 +58,12 @@ let dice_human_icon = document.getElementById('human-dice');
 let dice_pc_icon = document.getElementById('pc-dice');
 let dice_game_msg = document.getElementById('game-result');
 
-console.log(dice_human_icon, dice_pc_icon, dice_game_msg);
+// al click del pulsante, genero dei numeri da 1 a 6
+dice_btn_start.addEventListener('click', function () {
+    // generiamo i numeri random con la libreria math per l'utente e il pc
+    let human_number = Math.floor(Math.random() * 6 + 1);
+    let pc_number = Math.floor(Math.random() * 6 + 1);
+    console.log(human_number, pc_number);
+});
 
 
