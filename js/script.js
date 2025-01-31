@@ -16,6 +16,8 @@ let ul_lista_spesa = document.getElementById('lista-spesa');
 
 // metto il bottone in attesa di un evento click
 btn_lista_spesa.addEventListener('click', function () {
+    // svuoto il contenuto della ul
+    ul_lista_spesa.innerHTML = '';
     // dichiaro la variabile contatore
     let i = 0
     // ciclo while sull'array della spesa
@@ -24,7 +26,8 @@ btn_lista_spesa.addEventListener('click', function () {
         let list_items_spesa = document.createElement('li');
         // inietto dinamicamente il contenuto dell'array sui list items
         list_items_spesa.innerText = array_lista_spesa[i];
-
+        // appendo i list items con il contenuto alla ul (unordered list)
+        ul_lista_spesa.appendChild(list_items_spesa);
         // incremento
         i++;
     }
