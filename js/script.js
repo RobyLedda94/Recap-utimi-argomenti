@@ -3,7 +3,7 @@
 
 // Dichiarazione dell'array 
 let array_lista_spesa = ['Pasta', 'Pomodori', 'Melanzane', 'Salumi', 'Frutta', 'Bevande'];
-console.log(array_lista_spesa);
+
 
 // Recupero gli elementi dal DOM
 
@@ -172,8 +172,6 @@ let btn_check = document.getElementById('check-film');
 let btn_add = document.getElementById('add-film');
 let btn_reset = document.getElementById('reset-list');
 
-
-
 // elementi di visualizazzione
 let films_todo_list = document.getElementById('film-todo-list');
 let msg_todoList = document.getElementById('msg-film');
@@ -181,23 +179,29 @@ let msg_todoList = document.getElementById('msg-film');
 
 // evento click per al bottone che mostra la lista
 btn_show.addEventListener('click', function () {
-    console.log(btn_show);
+    // utilizzo un ciclo for per iterare gli elementi dell'array films
+    for (let i = 0; i < films.length; i++) {
+        // per ogni iterazione creo un list item
+        let li_todoList = document.createElement('li');
+        console.log(li_todoList);
+    }
+
 });
 
 // evento click al bottone che controlla gli elementi della lista
 btn_check.addEventListener('click', function () {
-    console.log(btn_check);
+
 });
 
 // evento click al bottone che aggiunge un nuovo elemento in coda nell'array
 btn_add.addEventListener('click', function () {
-    console.log(btn_add);
+
 });
 
 
 // evento click al bottone che nasconde la todo list 
 btn_reset.addEventListener('click', function () {
-    console.log(btn_reset);
+
 });
 
 
