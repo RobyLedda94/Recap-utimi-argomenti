@@ -158,6 +158,32 @@ dice_btn_reset.addEventListener('click', function () {
 
 
 
+// Film todo list
+
+// creazione array di films
+
+let films = ['Troy', 'Fury', 'Fight-club', 'Man on fire', 'Il Padrino', 'Quei bravi ragazzi', 'Interstellar', 'Arancia Meccanica'];
+
+// recupero tutti gli elementi dal DOM
+
+// bottoni
+let btn_show = document.getElementById('show-film');
+let btn_check = document.getElementById('check-film');
+let btn_add = document.getElementById('add-film');
+let btn_reset = document.getElementById('reset-list');
+
+console.log(btn_show, btn_check, btn_add, btn_reset);
+
+// elementi di visualizazzione
+let films_todo_list = document.getElementById('film-todo-list');
+let msg_todoList = document.getElementById('msg-film');
+
+console.log(films_todo_list, msg_todoList);
+
+
+
+
+
 
 
 
