@@ -22,7 +22,9 @@ btn_lista_spesa.addEventListener('click', function () {
     while (i < array_lista_spesa.length) {
         // creo i list items che conterrano gli elementi dell'array
         let list_items_spesa = document.createElement('li');
-        console.log(list_items_spesa);
+        // inietto dinamicamente il contenuto dell'array sui list items
+        list_items_spesa.innerText = array_lista_spesa[i];
+
         // incremento
         i++;
     }
