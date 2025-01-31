@@ -201,7 +201,8 @@ btn_show.addEventListener('click', function () {
 btn_check.addEventListener('click', function () {
     // al momento del click recupero l'elemento input e catturo il valore inserito dall'utente
     let film_input = document.getElementById('input-film-list').value.toLowerCase();
-    console.log(film_input);
+    // variabile flag impostata a false (parto con il presupposto che non ho trovato il film)
+    let flag_foundFilm = false;
 
 });
 
