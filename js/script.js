@@ -179,11 +179,16 @@ let msg_todoList = document.getElementById('msg-film');
 
 // evento click per al bottone che mostra la lista
 btn_show.addEventListener('click', function () {
+    // svuoto il contenuto della lista per evitare che venga mostrata più volte nel DOM
+    films_todo_list.innerHTML = '';
     // utilizzo un ciclo for per iterare gli elementi dell'array films
     for (let i = 0; i < films.length; i++) {
         // per ogni iterazione creo un list item
         let li_todoList = document.createElement('li');
-        console.log(li_todoList);
+        // inietto gli elementi dell'array ai list items
+        li_todoList.innerText = films[i];
+        // appendo i list items alla lista 'film_todo_list'
+        films_todo_list.appendChild(li_todoList);
     }
 
 });
