@@ -207,11 +207,18 @@ btn_check.addEventListener('click', function () {
     // ciclo for sull'array di films
     for (let i = 0; i < films.length; i++) {
         // annido nel ciclo un if di controllo che confronta gli elementi dell'array con il valore del campo input
-        if (films[i] === film_input) {
+        if (films[i].toLowerCase() === film_input.toLowerCase()) {
             // setto la variabile flag a true 
             flag_foundFilm = true;
         };
     };
+
+    // istruzione condizionale dove indico in base alla variabile flag se il film e presente o meno
+    if (flag_foundFilm) {
+        console.log('film presente');
+    } else {
+        console.log('aggiungi il nuovo film');
+    }
 
 });
 
