@@ -435,19 +435,37 @@ let reset_btn = document.getElementById('reset-fizz');
 // assegnamo ai bottoni un evento clik
 
 start_btn.addEventListener('click', function () {
+
+    // svuoto tutta la struttura della griglia per evitare di ricrearla
+    grid_FizzBuzz.innerHTML = '';
     // eseguo in ciclo che genera 100 iterazioni
     for (let i = 1; i <= 100; i++) {
         // per ogni iterazione creo un elemento square
         let square = document.createElement('div');
         // assegno agli elementi creati la classe square definita in css
         square.classList.add('square');
-        console.log(square);
-    }
+        grid_FizzBuzz.appendChild(square);
+
+        // controllo per stabilire i multipli di 3 e di 5
+        if (i % 3 === 0 && i % 5 === 0) {
+            square.innerText = 'FizzBuzz';
+            square.classList.add('fizzbuzz');
+        } else if (i % 3 === 0) {
+            square.innerText = 'Fizz';
+            square.classList.add('fizz');
+        } else if (i % 5 === 0) {
+            square.innerText = 'Buzz';
+            square.classList.add('buzz');
+        } else {
+            square.innerText = `${i}`;
+        }
+    };
 
 });
 
 reset_btn.addEventListener('click', function () {
-
+    // svuoto tutta la struttura della griglia per evitare di ricrearla
+    grid_FizzBuzz.innerHTML = '';
 });
 
 
