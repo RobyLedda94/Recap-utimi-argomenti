@@ -316,6 +316,9 @@ btn_palindroma.addEventListener('click', function () {
 });
 
 
+// Carosello
+
+
 
 
 
