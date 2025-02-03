@@ -419,6 +419,21 @@ prev_btn.addEventListener('click', function () {
 
 
 
+// --------------------------------------------
+
+// FizzBuzz
+
+// Dichiarazione delle variabili che recuperano tutti gli elementi dal DOM
+
+// recupero l'elemento griglia
+let grid_FizzBuzz = document.getElementById('grid');
+
+// recupero i bottoni per generare e resettare
+let start_btn = document.getElementById('start-fizz');
+let reset_btn = document.getElementById('reset-fizz');
+
+
+
 
 
 
