@@ -327,9 +327,8 @@ console.log(array_img);
 let items_container = document.querySelector('.items');
 let thumbs_container = document.querySelector('.thumbs');
 
-// recupero gli elementi dal dom che avranno il compito di scorrere le immagini del carosello
-let next_btn = document.querySelector('.next');
-let prev_btn = document.querySelector('.prev');
+
+
 
 
 // dichiaro 2 variabili che andranno a contenere la struttura html per ogni immagine
@@ -355,7 +354,7 @@ for (let i = 0; i < array_img.length; i++) {
 
 // inietto gli elementi iterati con il ciclo for nei contenitori padre
 items_container.innerHTML = itemsContent;
-thumbs_container.innerHTML = thumbsContent;
+thumbs_container.innerHTML += thumbsContent;
 
 // recupero tutti gli elementi con la classe item e solo al primo elemento assegno la classe active
 document.querySelectorAll('.item')[active_image].classList.add('active');
@@ -363,6 +362,47 @@ document.querySelectorAll('.item')[active_image].classList.add('active');
 
 // recupero tutti gli elementi con la classe thumb e solo al primo elemento assegno la classe active
 document.querySelectorAll('.thumb')[active_image].classList.add('active');
+
+
+
+// recupero gli elementi dal dom che avranno il compito di scorrere le immagini del carosello
+let next_btn = document.querySelector('.next');
+let prev_btn = document.querySelector('.prev');
+
+
+
+// assegno ai bottoni un evento click
+
+next_btn.addEventListener('click', function () {
+    // logica per lo scorrimento delle immagini sul pulsante next
+    if (active_image === array_img.length - 1) {
+        active_image = 0;
+    } else {
+        active_image++;
+    };
+
+    // devo rimuovere la classe active dal primo elemento
+    document.querySelector('.item.active').classList.remove('active');
+    // aggiungo la classe active agli elementi sucessivi
+    document.querySelectorAll('.item')[active_image].classList.add('active');
+
+    // stesso approccio per le thumb
+
+    // devo rimuovere la classe active dal primo elemento
+    document.querySelector('.thumb.active').classList.remove('active');
+    // aggiungo la classe active agli elementi sucessivi
+    document.querySelectorAll('.thumb')[active_image].classList.add('active');
+
+
+
+
+
+});
+
+
+prev_btn.addEventListener('click', function () {
+
+});
 
 
 
