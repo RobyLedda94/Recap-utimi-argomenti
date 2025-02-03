@@ -332,7 +332,8 @@ let thumbs_container = document.querySelector('.thumbs');
 let itemsContent = '';
 let thumbsContent = '';
 
-
+// dichiaro una variabile contatore per tenere traccia degli elementi attivi
+let active_image = 0;
 
 // ciclo for sull'array di immagini
 for (let i = 0; i < array_img.length; i++) {
@@ -341,7 +342,7 @@ for (let i = 0; i < array_img.length; i++) {
                         <img src="${array_img[i]}" alt="img_1">
                     </div>`
 
-    thumbsContent += `<div class="item active">
+    thumbsContent += `<div class="thumb active">
                         <img src="${array_img[i]}" alt="img_1">
                     </div>`
 
@@ -351,6 +352,11 @@ for (let i = 0; i < array_img.length; i++) {
 // inietto gli elementi iterati con il ciclo for nei contenitori padre
 items_container.innerHTML = itemsContent;
 thumbs_container.innerHTML = thumbsContent;
+
+// recupero tutti gli elementi con la classe item
+
+document.querySelectorAll('.item');
+console.log(document.querySelectorAll('.item'));
 
 
 
