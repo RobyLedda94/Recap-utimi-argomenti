@@ -78,3 +78,37 @@
 .next {
     bottom: 20px;
 }
+
+
+/* FizzBuzz */
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.square {
+    width: calc(100% / 10);
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* stile per i multipli di 3 e di 5 */
+
+.fizzbuzz {
+    background-color: goldenrod;
+}
+
+.fizz {
+    background-color: rgba(131, 77, 41, 0.699);
+}
+
+.buzz {
+    background-color: rgba(151, 168, 55, 0.521);
+
+}
