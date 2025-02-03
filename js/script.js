@@ -327,14 +327,30 @@ console.log(array_img);
 let items_container = document.querySelector('.items');
 let thumbs_container = document.querySelector('.thumbs');
 
+
 // dichiaro 2 variabili che andranno a contenere la struttura html per ogni immagine
 let itemsContent = '';
 let thumbsContent = '';
 
+
+
 // ciclo for sull'array di immagini
 for (let i = 0; i < array_img.length; i++) {
-    console.log(array_img[i]);
-}
+    // per ogni iterazione creo un elemento
+    itemsContent += `<div class="item active">
+                        <img src="${array_img[i]}" alt="img_1">
+                    </div>`
+
+    thumbsContent += `<div class="item active">
+                        <img src="${array_img[i]}" alt="img_1">
+                    </div>`
+
+};
+
+
+// inietto gli elementi iterati con il ciclo for nei contenitori padre
+items_container.innerHTML = itemsContent;
+thumbs_container.innerHTML = thumbsContent;
 
 
 
