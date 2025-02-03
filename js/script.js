@@ -239,7 +239,8 @@ btn_check.addEventListener('click', function () {
 btn_add.addEventListener('click', function () {
     // al momento del click recupero l'elemento input e catturo il valore inserito dall'utente
     let film_input = document.getElementById('input-film-list').value.toLowerCase();
-
+    // variabile flag impostata a false (parto con il presupposto che non ho trovato il film)
+    let flag_foundFilm = false;
 
     // svuoto le classi del messaggio per evitare conflitti
     msg_todoList.classList = '';
@@ -251,8 +252,17 @@ btn_add.addEventListener('click', function () {
         return;
     };
 
-    // istruzione condizionale dove utilizzo il metodo includes
-    if (films.includes(film_input)) {
+    // ciclo for sull'array di films
+    for (let i = 0; i < films.length; i++) {
+        // annido nel ciclo un if di controllo che confronta gli elementi dell'array con il valore del campo input
+        if (films[i].toLowerCase() === film_input.toLowerCase()) {
+            // setto la variabile flag a true 
+            flag_foundFilm = true;
+        };
+    };
+
+    // istruzione condizionale dove indico in base alla variabile flag se il film e presente o meno
+    if (flag_foundFilm) {
         // inietto del contenuto al messaggio tramite il template literal
         msg_todoList.innerText = `Il film ${film_input} è gia presente nella lista`;
         msg_todoList.classList.add('text-danger', 'my-2');
@@ -272,6 +282,22 @@ btn_reset.addEventListener('click', function () {
     films_todo_list.innerHTML = '';
 
 });
+
+// ------------------------------------------------------------------------
+
+// Controllare che una parola inserita dall'utente sia palindroma 
+
+// recupero il bottone da dom
+let btn_palindroma = document.getElementById('btn-palindroma');
+
+// assegno al bototne un evento click
+btn_palindroma.addEventListener('click', function () {
+    // recupero l'elemento input e catturo il valore inserito dall'utente
+    let input_palindroma = document.getElementById('palindroma').value;
+    console.log(typeof input_palindroma);
+});
+
+
 
 
 
