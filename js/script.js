@@ -490,7 +490,10 @@ let li_operazioni = document.getElementById('storico-operazioni');
 // assegno gli eventi ai bottoni
 
 btn_startSomma.addEventListener('click', function () {
-    console.log(btn_startSomma);
+    // recupero l'elemento input e catturo il valore, converto il valore restituito in numero per la somma
+    let input_NumberOne = parseInt(document.getElementById('somma-num-one').value, 10);
+    let input_NumberTwo = parseInt(document.getElementById('somma-num-two').value, 10);
+    console.log(input_NumberOne, input_NumberTwo);
 });
 
 btn_resetSomma.addEventListener('click', function () {
