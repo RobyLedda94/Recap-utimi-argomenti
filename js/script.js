@@ -318,6 +318,11 @@ btn_palindroma.addEventListener('click', function () {
 
 // Carosello
 
+// array di immagini del carosello
+
+let array_img = ["./img/img_1.jpg", "./img/img_2.jpg", "./img/img_3.jpg", "./img/img_4.jpg", "./img/img_5.jpg", "./img/img_6.jpg"];
+console.log(array_img);
+
 
 
 
