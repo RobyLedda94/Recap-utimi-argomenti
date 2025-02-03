@@ -294,7 +294,8 @@ let btn_palindroma = document.getElementById('btn-palindroma');
 btn_palindroma.addEventListener('click', function () {
     // recupero l'elemento input e catturo il valore inserito dall'utente
     let input_palindroma = document.getElementById('palindroma').value;
-    console.log(typeof input_palindroma);
+    // in console, eseguo il metodo split per scomporre la parola inserita dall'utente
+    console.log(input_palindroma.split(''));
 });
 
 
