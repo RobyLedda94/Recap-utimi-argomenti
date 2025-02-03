@@ -338,11 +338,11 @@ let active_image = 0;
 // ciclo for sull'array di immagini
 for (let i = 0; i < array_img.length; i++) {
     // per ogni iterazione creo un elemento
-    itemsContent += `<div class="item active">
+    itemsContent += `<div class="item">
                         <img src="${array_img[i]}" alt="img_1">
                     </div>`
 
-    thumbsContent += `<div class="thumb active">
+    thumbsContent += `<div class="thumb">
                         <img src="${array_img[i]}" alt="img_1">
                     </div>`
 
@@ -353,10 +353,13 @@ for (let i = 0; i < array_img.length; i++) {
 items_container.innerHTML = itemsContent;
 thumbs_container.innerHTML = thumbsContent;
 
-// recupero tutti gli elementi con la classe item
+// recupero tutti gli elementi con la classe item e solo al primo elemento assegno la classe active
+document.querySelectorAll('.item')[active_image].classList.add('active');
 
-document.querySelectorAll('.item');
-console.log(document.querySelectorAll('.item'));
+
+// recupero tutti gli elementi con la classe thumb e solo al primo elemento assegno la classe active
+document.querySelectorAll('.thumb')[active_image].classList.add('active');
+
 
 
 
