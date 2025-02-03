@@ -472,6 +472,24 @@ reset_btn.addEventListener('click', function () {
 
 // Calcolatrice semplice, effettuo una somma, salvo il risultato in un array e lo mostro a video sotto forma di lista
 
+// creo un array vuoto dove salvo lo storico delle operazioni
+
+let storico_operazioni = [];
+
+// dichiarazione delle variabili in cui recupero tutti gli elementi utili dal DOM
+
+// bottoni
+let btn_startSomma = document.getElementById('start-somma');
+let btn_resetSomma = document.getElementById('reset-somma');
+
+// elementi di visualizazzione
+let risultato_somma = document.getElementById('risultato-operazione');
+let msg_errore = document.getElementById('msg-errore');
+let li_operazioni = document.getElementById('storico-operazioni');
+
+
+
+
 
 
 
