@@ -487,6 +487,16 @@ let risultato_somma = document.getElementById('risultato-operazione');
 let msg_errore = document.getElementById('msg-errore');
 let li_operazioni = document.getElementById('storico-operazioni');
 
+// assegno gli eventi ai bottoni
+
+btn_startSomma.addEventListener('click', function () {
+    console.log(btn_startSomma);
+});
+
+btn_resetSomma.addEventListener('click', function () {
+    console.log(btn_resetSomma);
+});
+
 
 
 
