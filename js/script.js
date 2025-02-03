@@ -497,11 +497,23 @@ btn_startSomma.addEventListener('click', function () {
 
     // prima controllo se l'utente sta inserendo dei dati validi
     if (isNaN(input_NumberOne) || isNaN(input_NumberTwo)) {
-        console.log('Non stai inserendo un dato valido');
+        // svuoto il messaggio del risultato se i dati sono sbagliari
+        risultato_somma.innerText = '';
+        // inietto il messaggio di errore all'elemento del dom
+        msg_errore.innerText = 'Inserisci un dato valido !!'
+        // stile del messaggio
+        msg_errore.classList.add('text-red');
     } else {
+        // in caso l'input è valido svuoto il messaggio di errore
+        msg_errore.innerText = '';
         // dichiaro una varibile che esegue la somma
         let somma_algebrica = input_NumberOne + input_NumberTwo;
         let operazione_completa = `${input_NumberOne} + ${input_NumberTwo} = ${somma_algebrica}`;
+
+        // inietto il risultato della somma all'elemento recuperato in precedenza
+        risultato_somma.innerText = `la somma tra ${input_NumberOne} + ${input_NumberTwo} è = ${somma_algebrica}`;
+        // stile al messaggio che mostra il risultato
+        risultato_somma.classList.add('text-green');
 
         // aggiungo nell'array storico operazioni la formula della somma 
         storico_operazioni.push(operazione_completa);
