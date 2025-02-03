@@ -432,6 +432,20 @@ let grid_FizzBuzz = document.getElementById('grid');
 let start_btn = document.getElementById('start-fizz');
 let reset_btn = document.getElementById('reset-fizz');
 
+// assegnamo ai bottoni un evento clik
+
+start_btn.addEventListener('click', function () {
+    // eseguo in ciclo che genera 100 iterazioni
+    for (let i = 1; i <= 100; i++) {
+
+    }
+
+});
+
+reset_btn.addEventListener('click', function () {
+
+});
+
 
 
 
