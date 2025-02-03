@@ -502,8 +502,17 @@ btn_startSomma.addEventListener('click', function () {
         // dichiaro una varibile che esegue la somma
         let somma_algebrica = input_NumberOne + input_NumberTwo;
         let operazione_completa = `${input_NumberOne} + ${input_NumberTwo} = ${somma_algebrica}`;
-        console.log(operazione_completa);
-    }
+
+        // aggiungo nell'array storico operazioni la formula della somma 
+        storico_operazioni.push(operazione_completa);
+        console.log(storico_operazioni);
+
+        // eseguo un ciclo for sull'array dello storico operazioni
+        for (let i = 0; i < storico_operazioni.length; i++) {
+            // per ogni iterazione creo un elemento lista
+
+        }
+    };
 });
 
 btn_resetSomma.addEventListener('click', function () {
