@@ -295,9 +295,15 @@ btn_palindroma.addEventListener('click', function () {
     // recupero l'elemento input e catturo il valore inserito dall'utente
     let input_palindroma = document.getElementById('palindroma').value;
     // split per suddividere la parola, reverse per invertire l'ordine, e join per riunire i caratteri invertiti
-    let check_word = input_palindroma.split('').reverse().join();
-    // metodo replaceAll per rimuovere le virgole
-    console.log(check_word.replaceAll(',', ''));
+    let check_word = input_palindroma.split('').reverse().join('');
+    console.log(check_word);
+
+    // controllo la parola inserita dall'utente, con la check word
+    if (input_palindroma === check_word) {
+        console.log('La parola è palindroma');
+    } else {
+        console.log('La parola non è palindroma');
+    }
 });
 
 
