@@ -511,7 +511,8 @@ btn_startSomma.addEventListener('click', function () {
         for (let i = 0; i < storico_operazioni.length; i++) {
             // per ogni iterazione creo un elemento lista
             let li_operazioni = document.createElement('li')
-            console.log(li_operazioni);
+            li_operazioni.innerText = storico_operazioni[i];
+
         }
     };
 });
