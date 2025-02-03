@@ -507,11 +507,17 @@ btn_startSomma.addEventListener('click', function () {
         storico_operazioni.push(operazione_completa);
         console.log(storico_operazioni);
 
+        // svuoto il contenuto della ul per evitare che venga ripetuto
+        ul_operazioni.innerHTML = '';
+
         // eseguo un ciclo for sull'array dello storico operazioni
         for (let i = 0; i < storico_operazioni.length; i++) {
             // per ogni iterazione creo un elemento lista
             let li_operazioni = document.createElement('li')
+            // inietto il contenuto dell'array storico operaioni in posizione i, ai list item creati dinamicamente
             li_operazioni.innerText = storico_operazioni[i];
+            // appendo i list item creati alla ul recuperata in precedenza
+            ul_operazioni.appendChild(li_operazioni);
 
         }
     };
