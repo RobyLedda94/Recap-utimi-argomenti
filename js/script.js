@@ -493,7 +493,16 @@ btn_startSomma.addEventListener('click', function () {
     // recupero l'elemento input e catturo il valore, converto il valore restituito in numero per la somma
     let input_NumberOne = parseInt(document.getElementById('somma-num-one').value, 10);
     let input_NumberTwo = parseInt(document.getElementById('somma-num-two').value, 10);
-    console.log(input_NumberOne, input_NumberTwo);
+    // console.log(input_NumberOne, input_NumberTwo);
+
+    // prima controllo se l'utente sta inserendo dei dati validi
+    if (isNaN(input_NumberOne) || isNaN(input_NumberTwo)) {
+        console.log('Non stai inserendo un dato valido');
+    } else {
+        // dichiaro una varibile che esegue la somma
+        let somma_algebrica = input_NumberOne + input_NumberTwo;
+        console.log(somma_algebrica);
+    }
 });
 
 btn_resetSomma.addEventListener('click', function () {
