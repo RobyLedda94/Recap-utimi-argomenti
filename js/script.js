@@ -511,7 +511,7 @@ btn_startSomma.addEventListener('click', function () {
         let operazione_completa = `${input_NumberOne} + ${input_NumberTwo} = ${somma_algebrica}`;
 
         // inietto il risultato della somma all'elemento recuperato in precedenza
-        risultato_somma.innerText = `la somma tra ${input_NumberOne} + ${input_NumberTwo} è = ${somma_algebrica}`;
+        risultato_somma.innerText = `La somma tra ${input_NumberOne} + ${input_NumberTwo} è = ${somma_algebrica}`;
         // stile al messaggio che mostra il risultato
         risultato_somma.classList.add('text-green');
 
@@ -531,12 +531,27 @@ btn_startSomma.addEventListener('click', function () {
             // appendo i list item creati alla ul recuperata in precedenza
             ul_operazioni.appendChild(li_operazioni);
 
+            // definisco lo stile della lista
+            ul_operazioni.classList.add('list-unstyled');
+            li_operazioni.classList.add('py-2');
+
         }
     };
 });
 
 btn_resetSomma.addEventListener('click', function () {
-    console.log(btn_resetSomma);
+    // nel reset svuoto l'array
+    storico_operazioni = [];
+
+    // svuoto tutto il contenuto degli elementi 
+    ul_operazioni.innerHTML = '';
+    risultato_somma.innerText = '';
+    msg_errore.innerText = '';
+
+    // reset dei campi input
+    document.getElementById('somma-num-one').value = '';
+    document.getElementById('somma-num-two').value = '';
+
 });
 
 
