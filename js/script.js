@@ -437,7 +437,11 @@ let reset_btn = document.getElementById('reset-fizz');
 start_btn.addEventListener('click', function () {
     // eseguo in ciclo che genera 100 iterazioni
     for (let i = 1; i <= 100; i++) {
-
+        // per ogni iterazione creo un elemento square
+        let square = document.createElement('div');
+        // assegno agli elementi creati la classe square definita in css
+        square.classList.add('square');
+        console.log(square);
     }
 
 });
