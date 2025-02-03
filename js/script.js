@@ -485,7 +485,7 @@ let btn_resetSomma = document.getElementById('reset-somma');
 // elementi di visualizazzione
 let risultato_somma = document.getElementById('risultato-operazione');
 let msg_errore = document.getElementById('msg-errore');
-let li_operazioni = document.getElementById('storico-operazioni');
+let ul_operazioni = document.getElementById('storico-operazioni');
 
 // assegno gli eventi ai bottoni
 
@@ -510,7 +510,8 @@ btn_startSomma.addEventListener('click', function () {
         // eseguo un ciclo for sull'array dello storico operazioni
         for (let i = 0; i < storico_operazioni.length; i++) {
             // per ogni iterazione creo un elemento lista
-
+            let li_operazioni = document.createElement('li')
+            console.log(li_operazioni);
         }
     };
 });
