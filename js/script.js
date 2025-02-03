@@ -327,6 +327,10 @@ console.log(array_img);
 let items_container = document.querySelector('.items');
 let thumbs_container = document.querySelector('.thumbs');
 
+// recupero gli elementi dal dom che avranno il compito di scorrere le immagini del carosello
+let next_btn = document.querySelector('.next');
+let prev_btn = document.querySelector('.prev');
+
 
 // dichiaro 2 variabili che andranno a contenere la struttura html per ogni immagine
 let itemsContent = '';
