@@ -393,15 +393,28 @@ next_btn.addEventListener('click', function () {
     // aggiungo la classe active agli elementi sucessivi
     document.querySelectorAll('.thumb')[active_image].classList.add('active');
 
-
-
-
-
 });
 
 
 prev_btn.addEventListener('click', function () {
+    // logica per lo scorrimento delle immagini sul pulsante next
+    if (active_image === 0) {
+        active_image = array_img.length - 1;
+    } else {
+        active_image--;
+    };
 
+    // devo rimuovere la classe active dal primo elemento
+    document.querySelector('.item.active').classList.remove('active');
+    // aggiungo la classe active agli elementi sucessivi
+    document.querySelectorAll('.item')[active_image].classList.add('active');
+
+    // stesso approccio per le thumb
+
+    // devo rimuovere la classe active dal primo elemento
+    document.querySelector('.thumb.active').classList.remove('active');
+    // aggiungo la classe active agli elementi sucessivi
+    document.querySelectorAll('.thumb')[active_image].classList.add('active');
 });
 
 
