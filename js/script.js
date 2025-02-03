@@ -468,6 +468,12 @@ reset_btn.addEventListener('click', function () {
     grid_FizzBuzz.innerHTML = '';
 });
 
+// ----------------------------------
+
+// Calcolatrice semplice, effettuo una somma, salvo il risultato in un array e lo mostro a video sotto forma di lista
+
+
+
 
 
 
