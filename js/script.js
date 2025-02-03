@@ -290,19 +290,28 @@ btn_reset.addEventListener('click', function () {
 // recupero il bottone da dom
 let btn_palindroma = document.getElementById('btn-palindroma');
 
+// recupero l'elemento dal dom che mostra un messaggio a video
+let msg_palindroma = document.getElementById('msg-palindroma');
+
 // assegno al bototne un evento click
 btn_palindroma.addEventListener('click', function () {
     // recupero l'elemento input e catturo il valore inserito dall'utente
-    let input_palindroma = document.getElementById('palindroma').value;
+    let input_palindroma = document.getElementById('palindroma').value.trim().toLowerCase().replace(/\s/g, '');
     // split per suddividere la parola, reverse per invertire l'ordine, e join per riunire i caratteri invertiti
     let check_word = input_palindroma.split('').reverse().join('');
     console.log(check_word);
 
+    // svuoto le classi assegnate al messaggio per evitare conflitti
+    msg_palindroma.classList = '';
+
     // controllo la parola inserita dall'utente, con la check word
     if (input_palindroma === check_word) {
-        console.log('La parola è palindroma');
+        msg_palindroma.innerText = 'La parola inserita è palindroma';
+        msg_palindroma.classList.add('text-green');
     } else {
-        console.log('La parola non è palindroma');
+        msg_palindroma.innerText = 'La parola inserita non è palindroma';
+        msg_palindroma.classList.add('text-danger');
+
     }
 });
 
