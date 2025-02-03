@@ -328,9 +328,13 @@ let items_container = document.querySelector('.items');
 let thumbs_container = document.querySelector('.thumbs');
 
 // dichiaro 2 variabili che andranno a contenere la struttura html per ogni immagine
-
 let itemsContent = '';
 let thumbsContent = '';
+
+// ciclo for sull'array di immagini
+for (let i = 0; i < array_img.length; i++) {
+    console.log(array_img[i]);
+}
 
 
 
