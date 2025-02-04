@@ -226,7 +226,7 @@ btn_check.addEventListener('click', function () {
     // istruzione condizionale dove indico in base alla variabile flag se il film e presente o meno
     if (flag_foundFilm) {
         // inietto del contenuto al messaggio tramite il template literal
-        msg_todoList.innerText = `Il film ${film_input} è gia presente nella lista`;
+        msg_todoList.innerText = `Il film ${film_input} è presente nella lista`;
         msg_todoList.classList.add('text-green', 'my-2');
     } else {
         msg_todoList.innerText = `Il film ${film_input} non è presente nella lista aggiungilo`;
@@ -278,6 +278,8 @@ btn_add.addEventListener('click', function () {
 
 // evento click al bottone che nasconde la todo list 
 btn_reset.addEventListener('click', function () {
+
+    msg_todoList.innerText = '';
     // svuoti tutti i contenuti della lista
     films_todo_list.innerHTML = '';
 
