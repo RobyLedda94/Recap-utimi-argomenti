@@ -556,6 +556,36 @@ btn_resetSomma.addEventListener('click', function () {
 
 });
 
+// ------------------------------------------------------------------------
+
+// Dato un array di valori numerici, troviamo il valore piu grande e il valore piu piccolo
+
+
+// Array di valori numerici
+let nums_array = [56, 3, 6, 10, 23, 69, 90, 7, 17, 44, 100];
+
+// definisco due variabili con un valore minimo e valore massimo
+let min = nums_array[0];
+let max = 0;
+
+
+// eseguo un ciclo for sull'array di numeri
+for (let i = 0; i < nums_array.length; i++) {
+    // confronto il valore in posizione i dell'array con il valore della variabile min
+    if (nums_array[i] < min) {
+        min = nums_array[i];
+    }
+
+    if (nums_array[i] > max) {
+        max = nums_array[i];
+    }
+};
+
+
+console.log(min + " " + max);
+
+
+
 
 
 
