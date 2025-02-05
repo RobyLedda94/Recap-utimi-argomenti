@@ -562,7 +562,7 @@ btn_resetSomma.addEventListener('click', function () {
 
 
 // Array di valori numerici
-let nums_array = [56, 3, 6, 10, 23, 69, 90, 7, 17, 44, 100];
+let nums_array = [56, 1, 3, 6, 10, 23, 69, 90, 7, 17, 44, 100];
 
 // definisco due variabili con un valore minimo e valore massimo
 let min = nums_array[0];
@@ -583,6 +583,21 @@ for (let i = 0; i < nums_array.length; i++) {
 
 
 console.log(min + " " + max);
+
+
+// Ordine di un array numerico
+
+nums_array.sort(function (a, b) {
+    return a - b;
+});
+
+// prendo il numero più grande e il numero più piccolo
+
+min = nums_array[0];
+max = nums_array[nums_array.length - 1];
+
+console.log(nums_array);
+console.log(min, max);
 
 
 
