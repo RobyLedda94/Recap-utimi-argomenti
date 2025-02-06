@@ -659,7 +659,10 @@ let letter = "a";
 let counter = 0;
 
 
+
+
 // esercizio svolto utilizzando il ciclo for
+/*
 
 for (let i = 0; i < str.length; i++) {
     if (str[i] === letter) {
@@ -668,10 +671,26 @@ for (let i = 0; i < str.length; i++) {
 };
 
 console.log(counter);
+*/
 
 
 
 
+// variabile che contiene la lunghezza della stringa
+const lenght = str.length;
+
+// variabile contatore
+let i = 0;
+
+
+while (i < lenght) {
+    if (str[i] === letter) {
+        counter++
+    };
+    i++;
+};
+
+console.log(counter);
 
 
 
