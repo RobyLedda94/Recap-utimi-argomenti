@@ -611,7 +611,7 @@ numbers = [1, 2, 3, 4, 5, 6];
 // array vuoto per i numeri pari
 let evenNumbers = [];
 
-
+/*
 // dichiaro la variabile a cui assegno la lunghezza dell'array
 const length = numbers.length;
 
@@ -620,10 +620,56 @@ for (let i = 0; i < length; i++) {
     if (numbers[i] % 2 === 0) {
         evenNumbers.push(numbers[i]);
     }
+}
 
-};
+
+
+
+*/
+
+// replica dell'esercizio utilizzando il ciclo while
+
+// variabile contatore
+/*
+let i = 0;
+
+while (i < numbers.length) {
+    if (numbers[i] % 2 === 0) {
+        evenNumbers.push(numbers[i]);
+    };
+    i++;
+}
+
 
 console.log(evenNumbers);
+
+*/
+
+
+
+/*
+Data una stringa ed una lettera, contare quante volte è ripetuta nella stringa
+*/
+
+// stringa
+let str = "What a wonderfull day for pie!"
+// lettera
+let letter = "a";
+// contatore
+let counter = 0;
+
+
+// esercizio svolto utilizzando il ciclo for
+
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+        counter++
+    };
+};
+
+console.log(counter);
+
+
 
 
 
