@@ -693,6 +693,18 @@ while (i < lenght) {
 console.log(counter);
 
 
+// Dato un numero n, creare un array con i primi n termini della sequenza Fibonacci
+// le prime due cifre della sequenza sono 0 e 1 e ogni numero sucessivo è la somma dei due precedenti
+
+
+// numero 
+let n = 5;
+// array contenente la prima sequenza di numeri
+let fibonacciSeq = [0, 1];
+
+
+
+
 
 
 
