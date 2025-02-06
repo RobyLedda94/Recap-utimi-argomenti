@@ -600,6 +600,32 @@ console.log(nums_array);
 console.log(min, max);
 
 
+// -------------------------------------------------------------------------------------------
+
+// Dato un array di numeri, creare un nuovo array contenente solo numeri pari
+
+
+// Array di numeri
+numbers = [1, 2, 3, 4, 5, 6];
+
+// array vuoto per i numeri pari
+let evenNumbers = [];
+
+
+// dichiaro la variabile a cui assegno la lunghezza dell'array
+const length = numbers.length;
+
+// ciclo for semplificato
+for (let i = 0; i < length; i++) {
+    if (numbers[i] % 2 === 0) {
+        evenNumbers.push(numbers[i]);
+    }
+
+};
+
+console.log(evenNumbers);
+
+
 
 
 
