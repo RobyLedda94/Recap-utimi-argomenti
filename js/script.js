@@ -700,7 +700,22 @@ console.log(counter);
 // numero 
 let n = 5;
 // array contenente la prima sequenza di numeri
-let fibonacciSeq = [0, 1];
+let fibonacciSeq = []; // [0, 1];
+
+// ciclo for
+for (let i = 0; i < n; i++) {
+
+    if (i < 2) {
+        fibonacciSeq.push(i);
+    } else {
+        let next = fibonacciSeq[i - 1] + fibonacciSeq[i - 2];
+        fibonacciSeq.push(next);
+    }
+
+};
+
+console.log(fibonacciSeq);
+
 
 
 
